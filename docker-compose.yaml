@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  wiremock:
+    image: rodolpheche/wiremock
+    container_name: wiremock
+    volumes:
+      - ./__files:/home/wore,pcl/__files
+      - ./mappings:/home/wiremock/mappings
+    ports:
+      - 8080:8080

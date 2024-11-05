@@ -1,0 +1,22 @@
+{
+    "request": {
+        "url": "/api/products",
+        "method":"POST",
+        "bodyPatterns": [
+            {
+                "matchesJsonPath":{
+                    "expression": "$",
+                    "equalToJson":"{\"product\":\"car\"}"
+                }
+            }
+        ]
+
+    },
+    "response":{
+        "status": 201,
+        "body": "produto criado com sucesso",
+        "headers": {
+            "Content-type": "application/json"
+        }
+    }
+}
